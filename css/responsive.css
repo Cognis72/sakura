@@ -1,0 +1,479 @@
+/* Mobile First Responsive Design */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .page-title {
+        font-size: 3rem;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1199px) {
+    .hero-container {
+        gap: var(--space-xl);
+    }
+    
+    .story-section {
+        gap: var(--space-xl);
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 991px) {
+    .nav-menu {
+        gap: var(--space-lg);
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-xl);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .story-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-lg);
+    }
+    
+    .story-section.reverse {
+        direction: ltr;
+    }
+    
+    .menu-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-image {
+        height: 250px;
+    }
+    
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-lg);
+    }
+    
+    /* Navigation Mobile */
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        border-top: 1px solid var(--border-color);
+        flex-direction: column;
+        gap: 0;
+        padding: var(--space-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+        box-shadow: var(--shadow-medium);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: var(--space-lg) 0;
+        font-size: 1.125rem;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-toggle.active .menu-icon {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .close-icon {
+        opacity: 1;
+    }
+    
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle,
+    .page-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    /* Sections */
+    .features,
+    .mission,
+    .values,
+    .franchise-benefits,
+    .menu,
+    .story,
+    .investment-info,
+    .franchise-process,
+    .contact-info,
+    .contact-form-section,
+    .map-section,
+    .locations {
+        padding: var(--space-xl) 0;
+    }
+    
+    .hero,
+    .page-hero {
+        padding: var(--space-xl) 0;
+    }
+    
+    /* Grids */
+    .features-grid,
+    .benefits-grid,
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+    
+    .investment-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .extras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-list {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .form-content {
+        padding: var(--space-xl);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        text-align: center;
+    }
+    
+    /* Buttons */
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .btn-large {
+        padding: var(--space-lg) var(--space-xl);
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .nav-container {
+        padding: 0 var(--space-md);
+    }
+    
+    /* Typography */
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Cards */
+    .feature-card,
+    .benefit-card,
+    .mission-card,
+    .investment-card,
+    .step,
+    .contact-card,
+    .location-card {
+        padding: var(--space-lg);
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    /* Menu */
+    .menu-image {
+        height: 200px;
+    }
+    
+    .menu-content {
+        padding: var(--space-lg);
+    }
+    
+    /* Investment */
+    .investment-amount {
+        font-size: 1.5rem;
+    }
+    
+    /* Step numbers */
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    /* Form */
+    .form-content {
+        padding: var(--space-lg);
+    }
+    
+    /* Map */
+    .map-placeholder iframe {
+        height: 300px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 400px) {
+    :root {
+        --space-xs: 0.125rem;
+        --space-sm: 0.375rem;
+        --space-md: 0.75rem;
+        --space-lg: 1.125rem;
+        --space-xl: 1.5rem;
+        --space-xxl: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--space-sm);
+    }
+    
+    .nav-container {
+        padding: 0 var(--space-sm);
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle,
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .feature-card,
+    .benefit-card,
+    .mission-card,
+    .investment-card,
+    .step,
+    .contact-card,
+    .location-card {
+        padding: var(--space-md);
+    }
+    
+    .form-content {
+        padding: var(--space-md);
+    }
+    
+    .nav-menu {
+        padding: var(--space-md);
+    }
+    
+    .nav-link {
+        padding: var(--space-md) 0;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero,
+    .page-hero {
+        padding: var(--space-lg) 0;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .hero-subtitle {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+        margin-bottom: var(--space-md);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-img,
+    .footer-logo-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark mode specific responsive adjustments */
+@media (max-width: 768px) {
+    [data-theme="dark"] .nav-menu {
+        background-color: var(--bg-color);
+        border-top: 1px solid var(--border-color);
+    }
+    
+    [data-theme="dark"] .form-content {
+        background-color: var(--surface-color);
+    }
+}
+
+/* Hover effects only on devices that support hover */
+@media (hover: hover) {
+    .feature-card:hover,
+    .benefit-card:hover,
+    .mission-card:hover,
+    .menu-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .feature-card,
+    .benefit-card,
+    .mission-card,
+    .menu-item {
+        transition: none;
+    }
+    
+    .btn {
+        min-height: 48px;
+    }
+    
+    .theme-toggle,
+    .language-toggle,
+    .nav-toggle {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
